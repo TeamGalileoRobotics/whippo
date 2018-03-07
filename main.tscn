@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/water.png" type="Texture" id=1]
 [ext_resource path="res://waterLeft.gd" type="Script" id=2]
 [ext_resource path="res://waterRight.gd" type="Script" id=3]
+[ext_resource path="res://sprites/pole.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 28.0
+height = 304.0
 
 [node name="Node2D" type="Node2D" index="0"]
 
 [node name="waterLeft" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0, 200 )
+position = Vector2( 0, 300 )
 scale = Vector2( 0.996094, 1 )
 texture = ExtResource( 1 )
 centered = false
@@ -17,11 +24,33 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="waterRight" type="Sprite" parent="." index="1"]
 
-position = Vector2( 530, 200 )
+position = Vector2( 530, 300 )
 scale = Vector2( 0.976563, 1 )
 texture = ExtResource( 1 )
 centered = false
 script = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Offset", "Transform" ]
+
+[node name="pole" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( 512, 300 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="poleSprite" type="Sprite" parent="pole" index="0"]
+
+position = Vector2( 18, 150 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pole" index="1"]
+
+position = Vector2( 18, 140 )
+shape = SubResource( 1 )
 
 
