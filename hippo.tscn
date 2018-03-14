@@ -5,22 +5,27 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 9.20086, 18.9704 )
+extents = Vector2( 13.4715, 28.148 )
 
-[node name="hippo" type="KinematicBody2D" index="0"]
+[node name="hippo" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+_sections_unfolded = [ "collision" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+position = Vector2( 20, 20 )
+scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 4.49541 )
+position = Vector2( 20, 30 )
 scale = Vector2( 4.45385, 0.710531 )
 shape = SubResource( 1 )
 

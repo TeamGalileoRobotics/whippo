@@ -1,4 +1,4 @@
-extends Sprite
+extends StaticBody2D
 
 const WATER_SPEED = 0.5
 const MIN_WATER_Y = 500
