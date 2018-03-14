@@ -6,7 +6,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if(Input.is_action_pressed("player2_up")):
+	if(Input.is_action_pressed("player2_up") && position.y > 500):
 		position.y -= WATER_SPEED
-	if(Input.is_action_pressed("player2_down")):
+	if(Input.is_action_pressed("player2_down") && position.y < 1024):
 		position.y += WATER_SPEED
