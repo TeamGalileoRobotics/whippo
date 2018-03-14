@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 1
+const SPEED = 2
 
 func _process(delta):
 	move_and_collide(Vector2(0, 1))
