@@ -11,7 +11,7 @@ custom_solver_bias = 0.0
 radius = 28.0
 height = 304.0
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="main" type="Node2D" index="0"]
 
 [node name="waterLeft" type="Sprite" parent="." index="0"]
 
