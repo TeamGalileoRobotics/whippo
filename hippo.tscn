@@ -20,7 +20,6 @@ _sections_unfolded = [ "collision" ]
 position = Vector2( 20, 20 )
 scale = Vector2( 1.4, 1.4 )
 texture = ExtResource( 1 )
-flip_h = true
 _sections_unfolded = [ "Offset" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
