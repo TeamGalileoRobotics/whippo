@@ -5,6 +5,6 @@ const SPEED = 2
 func _process(delta):
 	move_and_collide(Vector2(0, 1))
 	if (Input.is_action_pressed("playerLeft_left")):
-		move_and_collide(Vector2(-SPEED, 0))
+		move_local_x(-SPEED)
 	if (Input.is_action_pressed("playerLeft_right")):
-		move_and_collide(Vector2(SPEED, 0))
+		move_local_x(SPEED)
