@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprites/pole.png" type="Texture" id=1]
 [ext_resource path="res://waterLeft.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://hippo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://hippoLeft.gd" type="Script" id=6]
 [ext_resource path="res://hippoRight.gd" type="Script" id=7]
+[ext_resource path="res://ball.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -19,10 +20,11 @@ height = 304.0
 custom_solver_bias = 0.0
 extents = Vector2( 250.98, 50 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="main" type="Node2D" index="0"]
 
 [node name="pole" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 512, 300 )
 z_index = 1
 input_pickable = false
@@ -47,6 +49,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="waterLeft" type="StaticBody2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0, 260 )
 input_pickable = false
 collision_layer = 1
@@ -72,6 +75,7 @@ shape = SubResource( 2 )
 
 [node name="waterRight" type="StaticBody2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 540, 260 )
 input_pickable = false
 collision_layer = 1
@@ -97,6 +101,7 @@ shape = SubResource( 2 )
 
 [node name="hippoLeft" parent="." index="3" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 250, 270 )
 script = ExtResource( 6 )
 
@@ -106,8 +111,13 @@ flip_h = true
 
 [node name="hippoRight" parent="." index="4" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 752.145, 270 )
 script = ExtResource( 7 )
+
+[node name="ball" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 765.73, -87.4258 )
 
 
 [editable path="hippoLeft"]
