@@ -33,6 +33,10 @@ playerLeft_right=[ Object(InputEventKey,"resource_local_to_scene":false,"resourc
 playerRight_right=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
  ]
 
+[physics]
+
+2d/default_linear_damp=0.0
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
