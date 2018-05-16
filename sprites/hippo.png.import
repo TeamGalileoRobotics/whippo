@@ -10,7 +10,7 @@ source_file="res://sprites/hippo.png"
 source_md5="ac9dd86e29f4b431870266197b5c25f3"
 
 dest_files=[ "res://.import/hippo.png-bb14b73a23c838c2fad183f84ee521f6.stex" ]
-dest_md5="cca2c65a64293f174b154c52763c21b0"
+dest_md5="5012438d4462792c63a92365001d920c"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -7,10 +7,10 @@ path="res://.import/pole.png-bd49d210a16d380cc0814c823aef144c.stex"
 [deps]
 
 source_file="res://sprites/pole.png"
-source_md5="12beb78ba3ecf4881af6dfd724bf8b0a"
+source_md5="e1fd93765438a9eeda115a445f068da3"
 
 dest_files=[ "res://.import/pole.png-bd49d210a16d380cc0814c823aef144c.stex" ]
-dest_md5="ab5c1064361e9c0ca0bf9e686265117a"
+dest_md5="3ca830084efbcce0b818e64170e6b2a3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
