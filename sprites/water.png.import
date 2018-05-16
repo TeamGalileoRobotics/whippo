@@ -7,10 +7,10 @@ path="res://.import/water.png-31009146f73da861d68bb8ecbdb2c273.stex"
 [deps]
 
 source_file="res://sprites/water.png"
-source_md5="7c235d388423ab9461e2243cdb877d25"
+source_md5="b2161d35746f0af5c9fd2e55f65a5a82"
 
 dest_files=[ "res://.import/water.png-31009146f73da861d68bb8ecbdb2c273.stex" ]
-dest_md5="0b130363864eeb86305bc7eae3f279df"
+dest_md5="e79d2ac36406daa5d846155d117c7681"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

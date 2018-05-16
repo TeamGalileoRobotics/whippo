@@ -66,7 +66,7 @@ script = ExtResource( 2 )
 
 [node name="waterLeft" type="Sprite" parent="waterLeft" index="0"]
 
-scale = Vector2( 0.996094, 1 )
+scale = Vector2( 3.90625, 3.92157 )
 texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -91,7 +91,8 @@ script = ExtResource( 4 )
 
 [node name="waterRight" type="Sprite" parent="waterRight" index="0"]
 
-scale = Vector2( 0.948319, 1 )
+position = Vector2( 3, 0 )
+scale = Vector2( 3.75, 3.95437 )
 texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
