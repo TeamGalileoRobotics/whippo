@@ -26,7 +26,7 @@ func _process(delta):
 		s.get_child(0).play("splash")
 		var ball = $"/root/main/ball"
 		var dist = sqrt(pow(ball.global_position.x - s.global_position.x, 2) + pow(ball.global_position.y - s.global_position.y, 2))
-		dist += 0.01
+		dist += 0.1
 		var power = BOOST / dist
 		if (dist < MAX_BOOST_DIST):
 			ball.apply_impulse(Vector2(0, 0), Vector2(power, - power))
