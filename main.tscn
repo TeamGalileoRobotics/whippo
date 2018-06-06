@@ -1,14 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sprites/pole.png" type="Texture" id=1]
-[ext_resource path="res://waterLeft.gd" type="Script" id=2]
-[ext_resource path="res://sprites/water.png" type="Texture" id=3]
-[ext_resource path="res://waterRight.gd" type="Script" id=4]
-[ext_resource path="res://hippo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://hippoLeft.gd" type="Script" id=6]
-[ext_resource path="res://hippoRight.gd" type="Script" id=7]
-[ext_resource path="res://ball.tscn" type="PackedScene" id=8]
-[ext_resource path="res://sprites/background.png" type="Texture" id=9]
+[ext_resource path="res://sprites/water.png" type="Texture" id=2]
+[ext_resource path="res://hippo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://hippoLeft.gd" type="Script" id=4]
+[ext_resource path="res://hippoRight.gd" type="Script" id=5]
+[ext_resource path="res://ball.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/background.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -61,7 +59,6 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="waterLeft" type="StaticBody2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 0, 317 )
 input_pickable = false
 collision_layer = 1
@@ -70,24 +67,22 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 2 )
 
 [node name="waterLeft" type="Sprite" parent="waterLeft" index="0"]
 
 scale = Vector2( 3.90625, 3.92157 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="waterLeft" index="1"]
 
-position = Vector2( 254.05, 100.021 )
-scale = Vector2( 1.03517, 1 )
+position = Vector2( 250, 90 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="waterRight" type="StaticBody2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 540, 317 )
 input_pickable = false
 collision_layer = 1
@@ -96,39 +91,38 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 4 )
 
 [node name="waterRight" type="Sprite" parent="waterRight" index="0"]
 
 position = Vector2( 3, 0 )
 scale = Vector2( 3.75, 3.95437 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="waterRight" index="1"]
 
 position = Vector2( 250, 90 )
-scale = Vector2( 0.996094, 1 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="hippoLeft" parent="." index="3" instance=ExtResource( 5 )]
+[node name="hippoLeft" parent="." index="3" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 250, 233 )
-script = ExtResource( 6 )
+script = ExtResource( 4 )
 
 [node name="Sprite" parent="hippoLeft" index="0"]
 
 flip_h = true
 
-[node name="hippoRight" parent="." index="4" instance=ExtResource( 5 )]
+[node name="hippoRight" parent="." index="4" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 752.145, 233 )
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 
-[node name="ball" parent="." index="5" instance=ExtResource( 8 )]
+[node name="ball" parent="." index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 760, 30 )
 z_index = 1
@@ -155,6 +149,7 @@ shape = SubResource( 3 )
 
 [node name="wallTop" type="StaticBody2D" parent="." index="7"]
 
+editor/display_folded = true
 position = Vector2( 790, 350 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
@@ -175,6 +170,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="wallLeft2" type="StaticBody2D" parent="." index="8"]
 
+editor/display_folded = true
 position = Vector2( 790, 350 )
 scale = Vector2( 0.996094, 1 )
 input_pickable = false
@@ -195,7 +191,7 @@ shape = SubResource( 3 )
 position = Vector2( 510, 320 )
 scale = Vector2( 3.20653, 3.20653 )
 z_index = -1
-texture = ExtResource( 9 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Z Index" ]
 __meta__ = {
 "_edit_lock_": true
