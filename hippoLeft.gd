@@ -4,7 +4,8 @@ onready var splash = preload("res://splash.tscn")
 var s 
 
 const SPEED = 2
-const BOOST = 500
+const BOOST = 10000
+const MAX_BOOST_DIST = 500
 
 func _ready():
 	s = splash.instance()
@@ -23,10 +24,10 @@ func _process(delta):
 	if (Input.is_action_just_pressed("playerLeft_up") && !s.get_child(0).is_playing()):
 		s.show()
 		s.get_child(0).play("splash")
-		var dist = sqrt(pow($"/root/main/ball".global_position.x-s.global_position.x,2) + (pow($"/root/main/ball".global_position.y-s.global_position.y,2)))
-		print(dist)
-		if(dist < BOOST):
-			$"/root/main/ball".apply_impulse(Vector2(0,0), Vector2(BOOST-dist,-BOOST+dist))
+		var ball = $"/root/main/ball"
+		var dist = sqrt(pow(ball.global_position.x - s.global_position.x, 2) + pow(ball.global_position.y - s.global_position.y, 2))
+		if (dist < MAX_BOOST_DIST):
+			ball.apply_impulse(Vector2(0, 0), Vector2(BOOST / dist, - (BOOST / dist)))
 
 
 func deleteChild(done):

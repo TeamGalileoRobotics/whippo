@@ -48,13 +48,13 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="poleSprite" type="Sprite" parent="pole" index="0"]
 
-position = Vector2( 20, 139 )
+position = Vector2( 13, 139 )
 scale = Vector2( 3.78, 3.78 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pole" index="1"]
 
-position = Vector2( 19, 146.5 )
+position = Vector2( 11, 146.5 )
 scale = Vector2( 1.40527, 0.966321 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Z Index" ]
@@ -131,6 +131,7 @@ script = ExtResource( 7 )
 [node name="ball" parent="." index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 760, 30 )
+z_index = 1
 gravity_scale = 2.0
 _sections_unfolded = [ "Angular", "Applied Forces", "Linear" ]
 
